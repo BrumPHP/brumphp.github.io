@@ -1,0 +1,3 @@
+# BrumPHP
+
+Birmingham PHP community.
