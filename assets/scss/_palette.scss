@@ -25,10 +25,10 @@ $palette: (
 @function brum-color-level($color-name: 'primary', $level: 0) {
     $color: brum-color($color-name);
     $color-base: if($level < 0, $color--black, $color--white);
-  
+
     @return mix($color-base, $color, $level * $color-interval);
 }
-  
+
 
 @each $name, $color in $palette {
     .brum--bg--#{$name} {
@@ -60,4 +60,23 @@ $palette: (
             border-color: brum-color-level($name, 1) !important;
         }
     }
+}
+
+.brum--event-summary h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.brum--event-summary .description {
+    $line-height: 1.5;
+    $font-size: 1rem;
+    $lines-to-show: 3;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    height: $font-size * $line-height * $lines-to-show;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }
