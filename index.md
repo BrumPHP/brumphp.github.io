@@ -10,7 +10,7 @@ layout: landingpage
             <p>
                 We are starting on a mission to showcase, discuss and learn anything in the world of PHP Developer life, encompassing anything from Symfony and Laravel, Composer, Personal/Commercial app demos, Toolchains, Dev culture and of course, Birmingham.
                 <br/>
-                Don't hesitate to get in touch if there is a subject or idea you'd like to discuss!
+                Don't hesitate to <a href="/community">get in touch</a> if there is a subject or idea you'd like to discuss!
             </p>
         </div>
     </div>
@@ -26,8 +26,8 @@ layout: landingpage
     <div class="container">
         <h2>Events</h2>
         <div class="row">
-            {% for event in site.events reversed limit=3 %}
-                {% include component/event-summary.html event=event %}
+            {% for event in site.events reversed limit:3 %}
+                {% include component/summary.html summary=event %}
             {% endfor %}
         </div>
     </div>

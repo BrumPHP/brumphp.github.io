@@ -1,0 +1,13 @@
+<div class="col-md-4 brum--summary">
+    <h3>{{include.summary.title}}</h3>
+    <p class="description">{{include.summary.description}}</p>
+    {% if include.summary.img %}
+        <div class="img-container">
+            <img src="{{include.summary.img}}" />
+        </div>
+    {% endif %}
+
+    {% if include.summary.link %}
+        <p><a class="btn btn-secondary" href="{{include.summary.link}}" role="button">View More &raquo;</a></p>
+    {% endif %}
+</div>

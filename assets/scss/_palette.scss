@@ -62,13 +62,27 @@ $palette: (
     }
 }
 
-.brum--event-summary h3 {
+h1 {
+    margin-top: 10px;
+}
+
+.brum--summary h3 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-.brum--event-summary .description {
+.brum--summary .img-container {
+    height: 120px;
+}
+
+.brum--summary img {
+    width: 50%;
+    margin: 10px auto;
+    display: block;
+}
+
+.brum--summary .description {
     $line-height: 1.5;
     $font-size: 1rem;
     $lines-to-show: 3;
