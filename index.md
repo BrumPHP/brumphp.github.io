@@ -19,11 +19,11 @@ layout: landingpage
     <div class="container">
         <!-- Todo have this populated by the meetup API -->
         {% assign nextEvent = site.events.first %}
-        <p class="py-4">Next meetup: <a class="py-4" href="{{nextEvent.link}}">{{nextEvent.date | date: "%a %b %d %Y"}} at {{nextEvent.location}}</a></p>
+        <p class="py-4">Next meetup: <a class="py-4" class="brum--fg--navy-blue" href="{{nextEvent.link}}">{{nextEvent.date | date: "%a %b %d %Y"}} at {{nextEvent.location}}</a></p>
     </div>
 </section>
 <section>
-    <div class="container">
+    <div class="container pb-2">
         <h2>Events</h2>
         <div class="row">
             {% for event in site.events reversed limit:3 %}
@@ -32,4 +32,3 @@ layout: landingpage
         </div>
     </div>
 </section>
-<hr>
