@@ -62,8 +62,20 @@ $palette: (
     }
 }
 
+.content {
+    min-height: calc(100vh - 70px);
+}
+
+.footer {
+    height: 50px;
+}
+
 h1 {
     margin-top: 10px;
+}
+
+.brum--summary {
+    padding-top: 20px;
 }
 
 .brum--summary h3 {
@@ -77,7 +89,8 @@ h1 {
 }
 
 .brum--summary img {
-    width: 50%;
+    width: 40%;
+    max-width: 110px;
     margin: 10px auto;
     display: block;
 }

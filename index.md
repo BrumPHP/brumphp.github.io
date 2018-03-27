@@ -17,8 +17,7 @@ layout: landingpage
 </main>
 <section class="brum--bg--yellow brum--fg--white">
     <div class="container">
-        <!-- Todo have this populated by the meetup API -->
-        {% assign nextEvent = site.events.first %}
+        {% assign nextEvent = site.events.last %}
         <p class="py-4">Next meetup: <a class="py-4" class="brum--fg--navy-blue" href="{{nextEvent.link}}">{{nextEvent.date | date: "%a %b %d %Y"}} at {{nextEvent.location}}</a></p>
     </div>
 </section>

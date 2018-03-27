@@ -5,8 +5,11 @@
         <link rel="stylesheet" href="/assets/main.css">
     </head>
     <body>
-        {% include component/header.html %}
-        {{ content }}
+        <div class="content">
+            {% include component/header.html %}
+            {{ content }}
+        </div>
+
         {% include component/footer.html %}
     </body>
 </html>
