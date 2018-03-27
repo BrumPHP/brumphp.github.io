@@ -8,6 +8,6 @@
     {% endif %}
 
     {% if include.summary.link %}
-        <p><a class="btn btn-secondary" href="{{include.summary.link}}" role="button">View More &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="{{include.summary.link}}" role="button">{{ include.summary.buttonText | default: 'View More' }} &raquo;</a></p>
     {% endif %}
 </div>

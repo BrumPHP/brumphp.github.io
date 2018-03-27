@@ -10,9 +10,13 @@ benefits:
 
 <main role="main">
     <div class="container">
-        <h1>Sponsors</h1>
+        <h1>{{page.title}}</h1>
         <div class="row">
-            Our sponsors mean a lot to us, as they help shape what we're able to do at events. Feel free to check them out.
+            <div class="col-md-12">
+                <p>
+                    Our sponsors mean a lot to us, as they help shape what we're able to do at events. Feel free to check them out.
+                </p>
+            </div>
         </div>
         <hr />
         <div class="row">
