@@ -1,0 +1,109 @@
+$color-interval: 10% !global;
+
+$color--black: #000000;
+$color--white: #FFFFFF;
+$color--royal-blue: #0639A6;
+$color--yellow: #EDAE49;
+$color--orange: #D1495B;
+$color--teal-blue: #00798C;
+$color--navy-blue: #003D5B;
+
+$palette: (
+  'white': $color--white,
+  'black': $color--black,
+  'royal-blue': $color--royal-blue,
+  'yellow': $color--yellow,
+  'orange': $color--orange,
+  'teal-blue': $color--teal-blue,
+  'navy-blue': $color--navy-blue,
+);
+
+@function brum-color($key: 'royal-blue') {
+    @return map-get($palette, $key);
+}
+
+@function brum-color-level($color-name: 'primary', $level: 0) {
+    $color: brum-color($color-name);
+    $color-base: if($level < 0, $color--black, $color--white);
+
+    @return mix($color-base, $color, $level * $color-interval);
+}
+
+
+@each $name, $color in $palette {
+    .brum--bg--#{$name} {
+      background-color: $color !important;
+      &--shaded {
+        background-color: brum-color-level($name, 0) !important;
+      }
+      &--tinted {
+        background-color: brum-color-level($name, 1) !important;
+      }
+    }
+
+    .brum--fg--#{$name} {
+        color: $color !important;
+        &--shaded {
+            color: brum-color-level($name, 0) !important;
+        }
+        &--tinted {
+            color: brum-color-level($name, 1) !important;
+        }
+    }
+
+    .brum--bd--#{$name} {
+        border-color: $color !important;
+        &--shaded {
+            border-color: brum-color-level($name, 0) !important;
+        }
+        &--tinted {
+            border-color: brum-color-level($name, 1) !important;
+        }
+    }
+}
+
+.content {
+    min-height: calc(100vh - 70px);
+}
+
+.footer {
+    height: 50px;
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+.brum--summary {
+    padding-top: 20px;
+}
+
+.brum--summary h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.brum--summary .img-container {
+    height: 120px;
+}
+
+.brum--summary img {
+    width: 40%;
+    max-width: 110px;
+    margin: 10px auto;
+    display: block;
+}
+
+.brum--summary .description {
+    $line-height: 1.5;
+    $font-size: 1rem;
+    $lines-to-show: 3;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    height: $font-size * $line-height * $lines-to-show;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,11 @@
+collections:
+    events:
+        output: true
+        permalink: /events/:path
+    sponsors:
+        output: false
+sass:
+    style: compressed
+    sass_dir: assets/scss
+
+future: true
