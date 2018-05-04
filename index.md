@@ -25,7 +25,9 @@ layout: landingpage
     <div class="container pb-2">
         <h2>Events</h2>
         <div class="row">
-            {% for event in site.events reversed limit:3 %}
+            <!-- Has to be done this way as Liquid can't reverse and limit properly -->
+            {% assign events = site.events | sort: 'date' | reverse %}
+            {% for event in events limit:3 %}
                 {% include component/summary.html summary=event %}
             {% endfor %}
         </div>
