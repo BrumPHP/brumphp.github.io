@@ -7,7 +7,12 @@
         </div>
     {% endif %}
 
-    {% if include.summary.link %}
-        <p><a class="btn btn-secondary" href="{{include.summary.link}}" role="button">{{ include.summary.buttonText | default: 'View More' }} &raquo;</a></p>
-    {% endif %}
+    <p>
+        {% if include.summary.link %}
+            <a class="btn btn-secondary" href="{{include.summary.link}}" role="button">{{ include.summary.buttonText | default: 'View More' }} &raquo;</a>
+        {% endif %}
+        {% if include.summary.vod %}
+            <a class="btn btn-secondary" href="{{include.summary.vod}}" role="button"> &raquo;</a>
+        {% endif %}
+    </p>
 </div>
