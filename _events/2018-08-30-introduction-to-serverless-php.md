@@ -10,6 +10,7 @@ description: >
 
   We have drinks and pizza courtesy of Jump24 (https://www.jump24.co.uk) and a ticket to Hackference Brum to give away, so hope to see you there!
 link: https://www.meetup.com/brumphp/events/252625865/
+vod: http://civico.net/brumtech/brumphp/4116
 location: Talis
 layout: event
 ---
